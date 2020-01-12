@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="index2.css" rel="stylesheet">
+    <title>Inchara Studios</title>
+</head>
+<body>
+    <!--Side nav-->
+    
+    <div class="sidenav" id="Sidenav">
+        <span class="closebtn" id="closeBTN" onclick="closeNav()">&times;</span>
+
+        <img src="https://images.pexels.com/photos/2191055/pexels-photo-2191055.jpeg">
+        <hr style="color: azure;">
+        <a href="#">About</a>
+        <hr style="color: azure;">
+        <a href="#">Services</a>
+        <hr style="color: azure;">
+        <a href="#">Contact</a>
+        <hr style="color: azure;">
+    </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <!--Page Content-->
+
+    
+
+
+
+    <!--
+        Sidebar scripts
+    -->
+    <script>
+        function openNav(){
+            document.getElementById('Sidenav').style.width = "250px";
+            
+        }
+        function closeNav() {
+            document.getElementById("Sidenav").style.width = "0";
+        }
+    </script>
+</body>
+</html>
