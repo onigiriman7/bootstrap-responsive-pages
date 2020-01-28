@@ -1,0 +1,53 @@
+.body{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.img1, .img2, .img3{
+    position: absolute;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1000px;
+    background-attachment: fixed;
+}
+
+.img1{
+    background-image: url("OT.jpg");
+    background-attachment: fixed;
+    background-color: blueviolet;
+}
+
+.img2{
+    background-image: url("pic1.jpeg");
+}
+
+.img3{
+    background-image: url("pic2.jpg");
+}
+
+.extra{
+    height: 700px;
+    background-color: burlywood;
+    
+    
+}
+
+.extra2{
+    height: 500px;
+    position: absolute;
+    background-image: url("OT.jpeg");
+    background-attachment: fixed;
+}
+
+.extra3{
+    height: 700px;
+    background-color: rgb(135, 222, 164);
+}

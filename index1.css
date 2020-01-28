@@ -15,21 +15,7 @@
 
 /* Fixed BG img */
 
-figure{
-    position: relative;
-    width: 100%;
-    height: 60%;
-    margin: 0!important;
-}
 
-.fixed-wrap{
-    clip: rect(0, auto, auto, 0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 #fixed {
     height: 600px;
     background-image: url('https://images.pexels.com/photos/858508/pexels-photo-858508.jpeg');

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <style>
+        #fixed1, #fixed2, #fixed3, #fixed4, #fixed5{
+            height: 600px;
+    
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+        }
+
+ #fixed1{
+
+            height: 600px;
+            background-image: url("pic1.jpeg");
+        }
+
+        #fixed2{
+            min-height: 600px;
+            background-image: url("https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg");
+        }
+        #fixed3{
+            min-height: 600px;
+            background-image: url("pic2.jpeg");
+        }
+        #fixed4{
+            min-height: 600px;
+            background-image: url("pic1.jpeg");
+        }
+        #fixed5{
+            min-height: 600px;
+            background-image: url("https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg");
+        }
+
+        .container{
+            background-color: white;
+            text-align: center;
+            padding: 50px 80px;
+            height: 500px;
+            overflow: hidden;
+            z-index: 2;
+        }
+        .scroller, .scroller2{
+            background-image: url("https://images.pexels.com/photos/601798/pexels-photo-601798.jpeg");
+            height: 80px;
+            width: 80px;
+            position: fixed;
+           
+            width: 500px;
+    height: 200px;
+            background-size: cover;
+        }
+        .scroller2{
+            
+           left: 600;
+            
+        }
+        .inner{
+            width: 100%;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div id="fixed1">
+        <div class="inner">
+            Hello
+        <div class="scroller">
+
+        </div>
+        <div class="scroller2">
+
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut nam expedita veritatis vel dicta voluptatibus nobis perferendis non sed, delectus voluptatem omnis unde eaque aperiam. Tempora iure maxime minima possimus!
+    </div>
+
+    <div id="fixed2">
+
+    </div>
+
+   
+
+    <div id="fixed3">
+
+    </div>
+
+    <div class="container">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut nam expedita veritatis vel dicta voluptatibus nobis perferendis non sed, delectus voluptatem omnis unde eaque aperiam. Tempora iure maxime minima possimus!
+    </div>
+
+    <div id="fixed4">
+
+    </div>
+    <div class="container">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut nam expedita veritatis vel dicta voluptatibus nobis perferendis non sed, delectus voluptatem omnis unde eaque aperiam. Tempora iure maxime minima possimus!
+    </div>
+
+    <div id="fixed5">
+
+    </div>
+    
+
+    <script>
+        $(document).ready(function () {
+    var scroller = $('.scroller');
+    var startPos = scroller.position();
+    console.log(startPos);
+    var speed = 10;
+    var last = 0;
+    i=0 
+    $(window).scroll(function () {
+         
+        var st = $(this).scrollTop();
+         if (st > last){
+             // downscroll code
+           i++;
+         } else {
+            // upscroll code
+           i--;
+         }
+         last = st;
+        
+        newPos = startPos.left+(i*speed)
+        
+        scroller.css({
+            'left': newPos
+        });
+    });
+});
+
+$(document).ready(function () {
+    var scroller2 = $('.scroller2');
+    var startPos = scroller2.position();
+    console.log(startPos);
+    var speed = 10;
+    var last = 0;
+    i=0 
+    $(window).scroll(function () {
+         
+        var st = $(this).scrollTop();
+         if (st > last){
+             // downscroll code
+           i++;
+         } else {
+            // upscroll code
+           i--;
+         }
+         last = st;
+        
+        newPos = startPos.left+(i*speed)
+        
+        scroller2.css({
+            'left': -newPos
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
